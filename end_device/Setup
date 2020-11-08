@@ -1,0 +1,5 @@
+Pre Requisites : 
+1. Install MQTT Client.
+2. Install Paho-mqtt library for python.
+3. Install Open cv (Don't built)
+4. FTP client is necessary

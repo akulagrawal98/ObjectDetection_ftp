@@ -1,0 +1,26 @@
+***************************************
+PROJECT IOT
+**************************************
+Pre Requirements:
+1. I have already installed mosquitto broker, client on rpi.
+2. I have alread installed ftp client on rpi
+>> sudo apt-get install ftp
+3. I have already installed fswebcam library on rpi that helps capture images from usbcam.
+**************************************
+Steps to setup
+1. Supply power to Rpi
+2. Interface Rpi with ssh using the command
+>> ssh pi@192.168.1.224
+3. Type in the command to start the vnc server on rpi
+>> tightvncserver
+4. Open Remmi and take the GUI interface
+5. Open up an MQTT broker on one of the system and note the IP.
+5. Open python_test.py on python and accordingly set IP.
+
+
+At end device:
+1. Request for the image.
+>> mosquitto_pub -h 192.168.1.14 -t "project" -m "capture"
+2. Run a python script for recieving image.
+>> python3 get_image_complete.py
+
